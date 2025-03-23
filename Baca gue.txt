@@ -1,0 +1,158 @@
+ Clone Repository
+Suruh mereka clone dulu proyeknya dari GitHub:
+
+sh
+Copy
+Edit
+git clone https://github.com/username/nama-repo.git
+cd nama-repo
+2. Install Dependencies
+Di dalam folder proyek, jalankan:
+
+sh
+Copy
+Edit
+composer install
+
+3. Buat & Atur File .env
+Copy file .env.example jadi .env:
+
+sh
+Copy
+Edit
+cp .env.example .env
+Edit .env biar sesuai dengan pengaturan database mereka.
+
+4. Generate Key Aplikasi
+Jalankan:
+
+sh
+Copy
+Edit
+php artisan key:generate
+5. Setup Database
+Buat database di MySQL (misalnya nama DB: laravel_db)
+
+Edit .env bagian database:
+
+makefile
+Copy
+Edit
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=root
+DB_PASSWORD=
+Jalankan migrasi dan seeder (kalau ada):
+
+sh
+Copy
+Edit
+php artisan migrate --seed
+6. Jalankan Storage Link (Kalau Ada Upload Gambar)
+sh
+Copy
+Edit
+php artisan storage:link
+7. Jalankan Server
+Jalankan Laravel:
+
+sh
+Copy
+Edit
+php artisan serve
+Kalau pakai Vite buat frontend:
+
+sh
+Copy
+Edit
+npm run dev
+Kalau semua sudah benar, proyek Laravel bakal jalan di http://127.0.0.1:8000. 🚀
+Kalau ada error, tinggal cek error log atau tanya aja di sini. 😆
+
+
+
+
+
+
+
+You said:
+jadiin 1 cuy, biar tiggal copy aja, jadiin kyk readme
+ChatGPT said:
+Berikut adalah README.md yang bisa langsung dipakai:
+
+md
+Copy
+Edit
+# Laravel Project Setup Guide
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek Laravel ini di komputer lokal.
+
+---
+
+## **1. Clone Repository**
+Clone repository ini ke komputer kamu:  
+```sh
+git clone https://github.com/username/nama-repo.git
+cd nama-repo
+2. Install Dependencies
+Jalankan perintah berikut untuk menginstal semua dependensi:
+
+sh
+Copy
+Edit
+composer install
+npm install
+composer install untuk menginstal package PHP
+
+npm install untuk menginstal package frontend (jika digunakan)
+
+3. Buat & Atur File .env
+Copy file .env.example menjadi .env:
+
+sh
+Copy
+Edit
+cp .env.example .env
+Edit file .env dan sesuaikan dengan pengaturan database kamu.
+
+4. Generate Key Aplikasi
+Jalankan perintah berikut untuk membuat application key:
+
+sh
+Copy
+Edit
+php artisan key:generate
+5. Setup Database
+Buat database baru di MySQL (contoh: laravel_db)
+
+Edit file .env bagian database:
+
+makefile
+Copy
+Edit
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_db
+DB_USERNAME=root
+DB_PASSWORD=
+Jalankan migrasi dan seeder (jika ada):
+
+sh
+Copy
+Edit
+php artisan migrate --seed
+6. Jalankan Storage Link (Jika Ada Upload Gambar)
+sh
+Copy
+Edit
+php artisan storage:link
+7. Jalankan Server
+Jalankan Laravel:
+
+sh
+Copy
+Edit
+php artisan serve
